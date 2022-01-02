@@ -1,5 +1,6 @@
 import './App.css';
-import BasicTextField from "./components/Input/TextField";
+import AAbasicTextField from "./components/Input/TextField";
+// import StateTextFields from "./components/Input/TextArea";
 
 function App() {
   return (
@@ -17,9 +18,17 @@ function App() {
       //   <basicTextField/>
       // </div>
       // basicTextField()
+
+
       <div>
-        <BasicTextField/>
+         {/*<AbasicTextField isValid={true} label="name"/>*/}
+         <AAbasicTextField isValid={true} label="name"/>
+         {/*<AbasicTextField isValid={false} label="name" message="invalid entity."/>*/}
       </div>
+
+      // <div>
+      //     <StateTextFields/>
+      // </div>
 
   );
 }

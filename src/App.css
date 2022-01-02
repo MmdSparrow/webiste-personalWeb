@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.test__label{
+  color: #43A047 !important;
+}
