@@ -1,3 +1,4 @@
+import {makeStyles} from "@material-ui/core";
 
 const canvasDots = function () {
     const canvas = document.querySelector('canvas'),
@@ -109,9 +110,24 @@ window.onload = function() {
 };
 
 
+const useStyles=makeStyles(()=>({
+    background:{
+        position: "absolute",
+        height: "100vh",
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
+        zIndex: 0,
+    },
+}));
+
 const CanvasConnection = () => {
+    const classes=useStyles();
+
     return(
-      <canvas className='connecting-dots'/>
+        // eslint-disable-next-line no-useless-concat
+      <canvas className={'connecting-dots' + ' '+ classes.background}/>
   )
 }
 
