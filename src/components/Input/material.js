@@ -1,10 +1,44 @@
-// import * as React from 'react';
-// import TextField from '@mui/material/TextField';
-//
-// export default function textField(props) {
-//     if(props.hasError){
-//         return (<TextField required id="outlined-d" label={props.lable} variant="outlined" />);
-//     }else {
-//         return (<TextField error required id="outlined-basic" label={props.lable} variant="outlined" helperText={props.erroeMessage}/>);
-//     }
-// }
+import * as React from 'react';
+import LoadingButton from '@mui/lab/LoadingButton';
+import Box from '@mui/material/Box';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
+import SaveIcon from '@mui/icons-material/Save';
+import SendIcon from '@mui/icons-material/Send';
+
+export default function LoadingButtonsTransition() {
+    const [loading, setLoading] = React.useState(false);
+    function handleClick() {
+        setLoading(true);
+    }
+
+    return (
+        <Box sx={{ '& > button': { m: 1 } }}>
+            <FormControlLabel
+                sx={{
+                    display: 'block',
+                }}
+                control={
+                    <Switch
+                        checked={loading}
+                        onChange={() => setLoading(!loading)}
+                        name="loading"
+                        color="primary"
+                    />
+                }
+                label="Loading"
+            />
+
+            <LoadingButton
+                onClick={handleClick}
+                endIcon={<SendIcon />}
+                loading={loading}
+                loadingPosition="end"
+                variant="contained"
+            >
+                Send
+            </LoadingButton>
+
+        </Box>
+    );
+}

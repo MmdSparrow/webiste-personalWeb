@@ -1,104 +1,48 @@
 import * as React from 'react';
-// import React,{Component} from 'react';
 import TextField from '@mui/material/TextField';
-import { alpha, styled } from '@mui/material/styles';
+import  {styled} from '@mui/material/styles';
 import '../../App.css'
-import {createTheme, makeStyles, withStyles} from "@material-ui/core";
+const COLOR_GREEN="#338800"
+const COLOR_RED="#c50a1c"
 
-// import PropTypes from  'prop-types'
-
-// export const textField=(props)=>{
-//     return (
-//         <TextField required id="outlined-d" label={props.lable} variant="outlined" />
-//     );
-// }
-//
-// export const errorTextField=(props)=>{
-//     return (
-//         <TextField error required id="outlined-basic" label={props.lable} variant="outlined" helperText={props.erroeMessage}/>
-//     );
-// }
-
-// export default function textFieldd(){
-//     return (
-//         <TextField required id="outlined-d" label="test" variant="outlined" />
-//     );
-// }
-
-// const textField=(props)=>{
-//     if(props.isValid){
-//         return (
-//             <TextField required id="outlined-d" label={props.label} variant="outlined" />
-//         );
-//     }else {
-//         return (
-//             <TextField error required id="outlined-d" label={props.label} variant="outlined" helperText={props.errorMessage} />
-//         );
-//     }
-//
-// }
-// function BasicTextField(props){
-//     return (
-//         <div>
-//             <TextField error required id="outlined-d" label="test" variant="outlined" helperText="test...." />
-//         </div>
-//     );
-// }
-
-const CssTextField = styled(TextField)({
-    '& label.Mui-focused': {
-        color: '#43A047',
-    },
-    '& .MuiInput-underline:after': {
-        borderBottomColor: '#43A047',
-    },
+const CssGreenTextField = styled(TextField)({
     '& .MuiOutlinedInput-root': {
         '& fieldset': {
-            borderColor: '#43A047',
+            borderColor: COLOR_GREEN,
         },
         '&:hover fieldset': {
-            borderColor: '#43A047',
+            borderColor: COLOR_GREEN,
         },
         '&.Mui-focused fieldset': {
-            borderColor: '#43A047',
+            borderColor: COLOR_GREEN,
         },
     },
 });
 
+const CssRedTextField = styled(TextField)({
+    '& .MuiOutlinedInput-root': {
+        '& fieldset': {
+            borderColor: COLOR_RED,
+        },
+        '&:hover fieldset': {
+            borderColor: COLOR_RED,
+        },
+        '&.Mui-focused fieldset': {
+            borderColor: COLOR_RED,
+        },
+    },
+});
 
-// const classes = useStyles();
-
-const AAbasicTextField=(props)=>{
-
-
+const CustomTextField=(props)=>{
     if(props.isValid){
         return (
-            <CssTextField required id="outlined-d" label={props.label} variant="outlined" margin="normal" className="test" InputLabelProps={{className:'test__label'}}/>
+            <CssGreenTextField required id="outlined-d" label={props.label} variant="outlined" margin="normal" InputLabelProps = {{style: {color: COLOR_GREEN},}}/>
         );
     }
     else {
         return (
-            <CssTextField error required id="outlined-d" label={props.label} variant="outlined" helperText={props.message} margin="normal"/>
+            <CssRedTextField error required id="outlined-d" label={props.label} variant="outlined" helperText={props.message} margin="normal"/>
         );
     }
 }
-
-export default AAbasicTextField;
-// const basicTextField = (props)=> {
-//     return (
-//         <div>
-//             <TextField error required id="outlined-d" label="test" variant="outlined" helperText="test...." />
-//         </div>
-//     );
-// }
-
-
-
-// textField.propTypes={
-//     lable: PropTypes.string.isRequired,
-//     isValid: PropTypes.bool,
-//     errorMessage: PropTypes.string
-// }
-// textField.defaultTypes={
-//     isValid: true
-// }
+export default CustomTextField;
