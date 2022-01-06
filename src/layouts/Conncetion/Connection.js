@@ -18,7 +18,7 @@ const canvasDots = function () {
     };
 
     const dots = {
-        nb: 600,
+        nb: 700,
         distance: 60,
         d_radius: 100,
         array: []
@@ -113,7 +113,7 @@ window.onload = function() {
 const useStyles=makeStyles(()=>({
     background:{
         position: "absolute",
-        height: "100vh",
+        // height: "80vh",
         top: 0,
         bottom: 0,
         left: 0,

@@ -1,56 +1,85 @@
 import * as React from 'react';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import FolderIcon from '@mui/icons-material/Folder';
-import RestoreIcon from '@mui/icons-material/Restore';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import {makeStyles} from "@material-ui/core";
-import styled from "@emotion/styled";
+import ContactMailOutlinedIcon from '@mui/icons-material/ContactMailOutlined';      //contact mail
+import CloudDownloadOutlinedIcon from '@mui/icons-material/CloudDownloadOutlined';  //download
+import ClassOutlinedIcon from '@mui/icons-material/ClassOutlined'; 	                //course
+import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';                //education
+import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';      //work
+import SpeedOutlinedIcon from '@mui/icons-material/SpeedOutlined';                  //speed
+import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';    //person
 
-
-
-const useStyles=makeStyles(()=>({
+const sxStyles={
     bottomNavigation:{
         position: 'relative',
-        background: '#de0404',
-        color: '#de0404',
+        justifyContent: 'start',
+        width: '40em',
+        backgroundColor: 'transparent',
+    },
+    bottomNavigationAction:{
+        color: "#efeaea",
+        '&:hover': {
+            transform: "scale(1.15)",
+        },
+        '&.MuiBottomNavigationAction-root.Mui-selected':{
+            transform: "scale(1.15)",
+            color: '#000000'
+        }
     }
-}));
-//
-// const MyComponent = styled('BottomNavigation')({
-//     color: '#de0404',
-//     backgroundColor: '#de0404',
-// });
+};
 
-const LabelBottomNavigation=()=> {
+const HeaderNavbar=()=> {
 
-    // const classes=useStyles();
-
-    const [value, setValue] = React.useState('recents');
+    const [value, setValue] = React.useState('about');
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
 
     return (
-        <BottomNavigation sx={{ position:'absolute', left:0,top: 20, width: '500em', backgroundColor:'transparent' }} value={value} onChange={handleChange}>
+        <BottomNavigation sx={sxStyles.bottomNavigation} value={value} onChange={handleChange}>
             <BottomNavigationAction
-                label="Recents"
-                value="recents"
-                icon={<RestoreIcon />}
+                sx={sxStyles.bottomNavigationAction}
+                label="about"
+                value="about"
+                icon={<PermIdentityOutlinedIcon />}
             />
             <BottomNavigationAction
-                label="Favorites"
-                value="favorites"
-                icon={<FavoriteIcon />}
+                sx={sxStyles.bottomNavigationAction}
+                label="skill"
+                value="skill"
+                icon={<SpeedOutlinedIcon />}
             />
             <BottomNavigationAction
-                label="Nearby"
-                value="nearby"
-                icon={<LocationOnIcon />}
+                sx={sxStyles.bottomNavigationAction}
+                label="experience"
+                value="experience"
+                icon={<WorkOutlineOutlinedIcon />}
             />
-            <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />
+            <BottomNavigationAction
+                sx={sxStyles.bottomNavigationAction}
+                label="education"
+                value="education"
+                icon={<SchoolOutlinedIcon />}
+            />
+            <BottomNavigationAction
+                sx={sxStyles.bottomNavigationAction}
+                label="courses"
+                value="courses"
+                icon={<ClassOutlinedIcon />}
+            />
+            <BottomNavigationAction
+                sx={sxStyles.bottomNavigationAction}
+                label="contact"
+                value="contact"
+                icon={<ContactMailOutlinedIcon />}
+            />
+            <BottomNavigationAction
+                sx={sxStyles.bottomNavigationAction}
+                label="download"
+                value="download"
+                icon={<CloudDownloadOutlinedIcon />}
+            />
         </BottomNavigation>
     );
 }
-export default LabelBottomNavigation;
+export default HeaderNavbar;

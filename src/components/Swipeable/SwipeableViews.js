@@ -2,21 +2,23 @@ import React from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import Pagination from './Pagination';
+import typography from "../../fonts/Typography";
+
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const styles = {
     root: {
         position: 'relative',
-        backgroundColor: "#ffab0d"
+        backgroundColor: 'transition'
     },
     slide: {
         padding: 15,
         minHeight: 100,
-        color: '#e50707',
+        backgroundColor: 'transition'
     },
 };
 
-class DemoAutoPlay extends React.Component {
+class ViewAutoPlay extends React.Component {
     state = {
         index: 0,
     };
@@ -29,13 +31,12 @@ class DemoAutoPlay extends React.Component {
 
     render() {
         const { index } = this.state;
-
+        const classes=typography;
         return (
             <div style={styles.root}>
                 <AutoPlaySwipeableViews index={index} onChangeIndex={this.handleChangeIndex}>
                     <div style={Object.assign({}, styles.slide)}>
-                        {/*<image />*/}
-                        my image...............................
+                        <img src={ require('../../assets/Images/profile.jpeg') } width="300em" height="300em" />
                     </div>
                     <div style={Object.assign({}, styles.slide)}>
                         <h2>
@@ -62,10 +63,10 @@ class DemoAutoPlay extends React.Component {
                         </p>
                     </div>
                 </AutoPlaySwipeableViews>
-                <Pagination dots={3} index={index} onChangeIndex={this.handleChangeIndex} />
+                <Pagination dots={4} index={index} onChangeIndex={this.handleChangeIndex} />
             </div>
         );
     }
 }
 
-export default DemoAutoPlay;
+export default ViewAutoPlay;

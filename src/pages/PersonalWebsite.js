@@ -1,6 +1,7 @@
-import CanvasConnection from "../layouts/conncetion/Connection";
 import {makeStyles} from "@material-ui/core";
-import LabelBottomNavigation from "../layouts/Header/Header";
+import ViewAutoPlay from "../components/Swipeable/SwipeableViews";
+import CanvasConnection from "../layouts/Conncetion/Connection";
+import HeaderNavbar from "../layouts/Header/Header";
 
 const useStyles=makeStyles(()=>({
     background:{
@@ -34,22 +35,33 @@ const useStyles=makeStyles(()=>({
         position: "relative",
         // backgroundColor:'#d22e2e',
         color:'#d22e2e',
-    }
+    },
+
 }));
 
-const Body=()=>{
+const MainPage=()=>{
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const classes = useStyles();
     return(
 
         <div className={classes.canvasWrap}>
-            {/*<div className={classes.overlay}/>*/}
-            {/*<LabelBottomNavigation/>*/}
-            <div className={classes.test2}>
-                test......................
-            </div>
-
             <CanvasConnection/>
+            <HeaderNavbar/>
+
+            <article>
+            {/*    <div>*/}
+            {/*        <span>*/}
+            {/*            Hi,*/}
+            {/*            <br> I<span>'</span>m <span>Mohammad</span></br>*/}
+            {/*        </span>*/}
+            {/*    </div>*/}
+            {/*    <ViewAutoPlay/>*/}
+
+            </article>
+            {/*<section>*/}
+
+            {/*</section>*/}
+
         </div>
 
 
@@ -59,4 +71,4 @@ const Body=()=>{
 
 
 
-export default Body;
+export default MainPage;

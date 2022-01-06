@@ -1,17 +1,11 @@
 import './App.css';
-import CustomTextField from "./components/Input/TextField";
-import CustomButton from "./components/Button/Button";
-import LoadingButtonsTransition from "./components/Input/material";
-import VerticalTabs from "./components/Tab/Tab";
-import LabelBottomNavigation from "./layouts/Header/Header";
-import DemoAutoPlay from "./components/Swipeable/SwipeableViews";
-import Body from "./index/main";
+import MainPage from "./pages/PersonalWebsite";
 
 
 function App() {
   return (
       // test
-      <Body/>
+      <MainPage/>
       // <div>
       //     <div>
       //         <CustomTextField isValid={true} label="name"/>
