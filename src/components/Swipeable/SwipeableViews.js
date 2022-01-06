@@ -2,7 +2,7 @@ import React from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import Pagination from './Pagination';
-import typography from "../../fonts/Typography";
+// import {typography} from "../../fonts/Typography";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -12,11 +12,21 @@ const styles = {
         backgroundColor: 'transition'
     },
     slide: {
-        padding: 15,
-        minHeight: 100,
+        // padding: 15,
+        // minHeight: 100,
         backgroundColor: 'transition'
     },
 };
+const textStyles={
+    h2:{
+        color: "white",
+
+    },
+    text:{
+        color:"white",
+
+    }
+}
 
 class ViewAutoPlay extends React.Component {
     state = {
@@ -31,39 +41,38 @@ class ViewAutoPlay extends React.Component {
 
     render() {
         const { index } = this.state;
-        const classes=typography;
         return (
             <div style={styles.root}>
                 <AutoPlaySwipeableViews index={index} onChangeIndex={this.handleChangeIndex}>
+                    {/*<div style={Object.assign({}, styles.slide)}>*/}
+                    {/*    <img src={ require('../../assets/Images/profile.jpeg') } width="300em" height="300em" />*/}
+                    {/*</div>*/}
                     <div style={Object.assign({}, styles.slide)}>
-                        <img src={ require('../../assets/Images/profile.jpeg') } width="300em" height="300em" />
-                    </div>
-                    <div style={Object.assign({}, styles.slide)}>
-                        <h2>
+                        <h2 style={textStyles.h2}>
                             Full Stack Developer
                         </h2>
-                        <p>
+                        <p style={textStyles.text}>
                             test test test test test
                         </p>
                     </div>
                     <div style={Object.assign({}, styles.slide)}>
-                        <h2>
+                        <h2 style={textStyles.h2}>
                             Math Teacher
                         </h2>
-                        <p>
+                        <p style={textStyles.text}>
                             test test test test test
                         </p>
                     </div>
                     <div style={Object.assign({}, styles.slide)}>
-                        <h2>
+                        <h2 style={textStyles.h2}>
                             Gamer
                         </h2>
-                        <p>
+                        <p style={textStyles.text}>
                             test test test test test
                         </p>
                     </div>
                 </AutoPlaySwipeableViews>
-                <Pagination dots={4} index={index} onChangeIndex={this.handleChangeIndex} />
+                <Pagination dots={3} index={index} onChangeIndex={this.handleChangeIndex} />
             </div>
         );
     }

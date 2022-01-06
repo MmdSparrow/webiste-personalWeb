@@ -12,8 +12,8 @@ const styles = {
     },
     dot: {
         backgroundColor: '#e4e6e7',
-        height: 12,
-        width: 12,
+        height: 9,
+        width: 9,
         borderRadius: 6,
         margin: 3,
     },
