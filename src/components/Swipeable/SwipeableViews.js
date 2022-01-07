@@ -19,7 +19,7 @@ const styles = {
 };
 const textStyles={
     h2:{
-        color: "white",
+        color: "#008000",
         fontSize: "40px",
         fontFamily: "roboto",
     },

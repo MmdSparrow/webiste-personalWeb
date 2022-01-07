@@ -8,15 +8,31 @@ const useStyles=makeStyles(()=>({
     canvasWrap:{
         // position:'relative',
         height:900,
+        // '@global': {
+        //     '*::-webkit-scrollbar': {
+        //         width: '1.3%',
+        //         maxWidth: '5px'
+        //     },
+        //     '*::-webkit-scrollbar-thumb': {
+        //         backgroundColor: 'white'
+        //     },
+        //     '*:focus': {
+        //         outline: 'none'
+        //     }
+        // }
     },
     flexTwoColumn:{
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'flex-end',
+        justifyContent: 'flex-start',
         flexWrap: 'wrap',
     },
     sliderAndWelcome:{
-      marginTop: 200,
+      marginTop: "14%",
+    },
+    textDiv:{
+        marginLeft:"15%",
+        marginBottom:"3%",
     },
     text:{
         color: "white",
@@ -24,8 +40,8 @@ const useStyles=makeStyles(()=>({
         fontFamily: "roboto",
     },
     slider:{
-        marginRight:"6em",
-        marginLeft:"25em",
+        marginRight:"2%",
+        marginLeft:"19%",
         width:"25em",
         height: "2em",
     },
@@ -46,7 +62,7 @@ const MainPage=()=>{
 
             <article className={classes.flexTwoColumn+ " " + classes.sliderAndWelcome}>
 
-                <div>
+                <div className={classes.textDiv}>
                     <span className={classes.text}>
                         Hi,<br/>
                         I<span className={classes.greenText}>'</span>m<span className={classes.greenText}> Mohammad Ali</span>

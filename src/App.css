@@ -3,6 +3,20 @@
   /*background: black;*/
 }
 
+/*#root::-webkit-scrollbar {*/
+/*  width: 0.25em;*/
+/*}*/
+/*#root::-webkit-scrollbar-track {*/
+/*  !*background: #f1f1f1;*!*/
+/*  background: black;*/
+/*}*/
+/*#root::-webkit-scrollbar-thumb {*/
+/*  background: rgba(120,120,120,0.4);*/
+/*}*/
+/*#root::-webkit-scrollbar-thumb:hover {*/
+/*  background: rgba(150,150,150,0.4);*/
+/*}*/
+
 /*.container:after {*/
 /*  content: '';*/
 /*  width: 0;*/
