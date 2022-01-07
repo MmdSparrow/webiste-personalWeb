@@ -20,14 +20,17 @@ const useStyles=makeStyles(()=>({
     },
     text:{
         color: "white",
-        fontSize: "60px",
+        fontSize: "70px",
         fontFamily: "roboto",
     },
     slider:{
         marginRight:"6em",
         marginLeft:"25em",
-        width:"20em",
+        width:"25em",
         height: "2em",
+    },
+    greenText:{
+        color: "#008000FF"
     }
 
 }));
@@ -41,12 +44,12 @@ const MainPage=()=>{
             <CanvasConnection/>
             <HeaderNavbar/>
 
-            <article className={classes.flexTwoColumn+ " "+ classes.sliderAndWelcome}>
+            <article className={classes.flexTwoColumn+ " " + classes.sliderAndWelcome}>
 
                 <div>
                     <span className={classes.text}>
                         Hi,<br/>
-                        I<span>'</span>m<span> Mohammad</span>
+                        I<span className={classes.greenText}>'</span>m<span className={classes.greenText}> Mohammad Ali</span>
                     </span>
                 </div>
 

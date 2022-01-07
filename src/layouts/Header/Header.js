@@ -30,7 +30,7 @@ const sxStyles={
 
 const HeaderNavbar=()=> {
 
-    const [value, setValue] = React.useState('about');
+    const [value, setValue] = React.useState('');
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };

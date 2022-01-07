@@ -20,11 +20,13 @@ const styles = {
 const textStyles={
     h2:{
         color: "white",
-
+        fontSize: "40px",
+        fontFamily: "roboto",
     },
     text:{
         color:"white",
-
+        fontSize: "20px",
+        fontFamily: "roboto",
     }
 }
 
@@ -52,7 +54,11 @@ class ViewAutoPlay extends React.Component {
                             Full Stack Developer
                         </h2>
                         <p style={textStyles.text}>
-                            test test test test test
+                            C, C++ (icon)   Java (Spring / Spring Boot) (icons)   python (Django) (icons)
+                            HTML, CSS, JavaScript (React) (icons)
+                            MySQL, Oracle (icons)
+                            Linux (icons)
+                            Git (icons)
                         </p>
                     </div>
                     <div style={Object.assign({}, styles.slide)}>
@@ -60,7 +66,7 @@ class ViewAutoPlay extends React.Component {
                             Math Teacher
                         </h2>
                         <p style={textStyles.text}>
-                            test test test test test
+                            Number Theory Teacher at <a href={"http://mathhouse.org/"}>Isfahan Mathematics House</a>.
                         </p>
                     </div>
                     <div style={Object.assign({}, styles.slide)}>
@@ -68,7 +74,8 @@ class ViewAutoPlay extends React.Component {
                             Gamer
                         </h2>
                         <p style={textStyles.text}>
-                            test test test test test
+                            Dota2 player (icons)
+                            my steam account:
                         </p>
                     </div>
                 </AutoPlaySwipeableViews>
