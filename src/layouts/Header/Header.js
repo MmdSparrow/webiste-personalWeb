@@ -16,6 +16,7 @@ const sxStyles={
         // justifyContent: 'space-evenly',
         width: '40em',
         backgroundColor: 'transparent',
+
     },
     bottomNavigationAction:{
         color: "#efeaea",

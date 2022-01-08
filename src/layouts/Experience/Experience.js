@@ -5,22 +5,6 @@ import '../../fonts/Fonts.css'
 const COLOR_GREEN="#008000"
 
 const useStyles=makeStyles(()=>({
-    canvasWrap:{
-        // position:'relative',
-        height:"100em",
-        // '@global': {
-        //     '*::-webkit-scrollbar': {
-        //         width: '1.3%',
-        //         maxWidth: '5px'
-        //     },
-        //     '*::-webkit-scrollbar-thumb': {
-        //         backgroundColor: 'white'
-        //     },
-        //     '*:focus': {
-        //         outline: 'none'
-        //     }
-        // }
-    },
     flexTwoColumn:{
         display: 'flex',
         flexDirection: 'row',
@@ -30,27 +14,8 @@ const useStyles=makeStyles(()=>({
     flexColumn:{
         display: 'flex',
         flexDirection: 'column',
-    },
-    sliderAndWelcome:{
-        marginTop: "16rem",
-    },
-    textDiv:{
-        marginLeft:"15rem",
+        alignItems:"center",
         marginBottom:"3rem",
-    },
-    text:{
-        color: "white",
-        fontSize: "70px",
-        fontFamily: "roboto",
-    },
-    slider:{
-        marginRight:"2rem",
-        marginLeft:"19rem",
-        width:"25rem",
-        height: "2rem",
-    },
-    greenText:{
-        color: "#008000FF"
     },
     h3Style:{
         color:"white",
@@ -60,28 +25,18 @@ const useStyles=makeStyles(()=>({
     h4Style:{
         color:"white",
         fontSize:"30px",
-        display:"flex",
-        justifyContent:"center",
         marginBottom:"0.7em",
         fontFamily: "roboto",
     },
     spanColor:{
         color:COLOR_GREEN,
         fontFamily: "roboto",
-        // visibility: "hidden",
-    },
-    logoDiv:{
-        display:"flex",
-        justifyContent:"center",
     },
     pStyle:{
         fontSize:"20px",
         color:"white",
-        display:"flex",
-        justifyContent:"center",
         marginTop:"0",
-    }
-
+    },
 }));
 
 setInterval(function(){
@@ -110,29 +65,26 @@ const Experience=()=>{
             </h3>
             <div className={classes.flexTwoColumn}>
                 <div className={classes.flexColumn}>
-                    <div className={classes.logoDiv}>
-                        <FanapLogo fill="green" stroke="green" width={"10rem"} height={"10rem"}/>
-                    </div>
+                    <FanapLogo fill="green" stroke="green" width={"10rem"} height={"10rem"}/>
                     <h4 className={classes.h4Style}>
                         Fanap Soft
                     </h4>
                     <p className={classes.pStyle}>
-                        Backend developer in :
-                        {/*<span className={classes.spanColor}> :</span>*/}
-                        {/*<span className={classes.spanColor}>#</span>*/}
-                        <br/>&nbsp;&nbsp;Digital School project<br/>
-                        date:2021/8/13 - present
+                        <span className={classes.spanColor}>Backend developer</span> in:<br/>
+                        &ensp; <span className={classes.spanColor}>></span> Digital School project<br/>
+                        &ensp; <span className={classes.spanColor}>></span> Digital School project<br/>
+                        Date: 2021/8/13 - present
                     </p>
                 </div>
                 <div className={classes.flexColumn}>
-                    <div className={classes.logoDiv}>
-                        <IMHLogo fill="green" stroke="green" width={"10rem"} height={"10rem"}/>
-                    </div>
+                    <IMHLogo fill="green" stroke="green" width={"10rem"} height={"10rem"}/>
                     <h4 className={classes.h4Style}>
                         Isfahan Mathematics House
                     </h4>
-                    <p>
-
+                    <p className={classes.pStyle}>
+                        <span className={classes.spanColor}>Number Theory</span> teacher<br/>
+                        Date: 2021/5/22 - present<br/>
+                        To see my courses click <a href="#course">here</a>
                     </p>
                 </div>
             </div>

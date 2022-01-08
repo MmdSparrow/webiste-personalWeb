@@ -94,9 +94,9 @@ const MainPage=()=>{
                     <Experience/>
                 </div>
 
-                {/*<div>*/}
-                {/*    <Education/>*/}
-                {/*</div>*/}
+                <div>
+                    <Education/>
+                </div>
 
                 {/*<div>*/}
                 {/*    <Contact/>*/}
