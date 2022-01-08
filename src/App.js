@@ -1,5 +1,8 @@
 import './App.css';
+import CustomTextArea from "./components/Input/TextArea";
+import CustomTextField from "./components/Input/TextField";
 import MainPage from "./pages/PersonalWebsite";
+import CustomForm from "./components/EmailForm/Form";
 
 
 function App() {
@@ -8,6 +11,15 @@ function App() {
       <MainPage/>
 
       // test
+      // <div>
+      //   <MultilineTextFields isValid={true}/>
+      //   <CustomTextField isValid={true} label={"message"}/>
+      // </div>
+
+      // <div style={{width:600, height:600}}>
+      //   <CustomForm/>
+      // </div>
+
       // <Customscroll/>
       // <div>
       //     <div>

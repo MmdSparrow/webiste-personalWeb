@@ -3,11 +3,14 @@ import ViewAutoPlay from "../components/Swipeable/SwipeableViews";
 import CanvasConnection from "../layouts/Conncetion/Connection";
 import HeaderNavbar from "../layouts/Header/Header";
 import '../fonts/Fonts.css'
+import Experience from "../layouts/Experience/Experience";
+import Education from "../layouts/Education/Education";
+import Contact from "../layouts/Contact/Contact";
 
 const useStyles=makeStyles(()=>({
     canvasWrap:{
         // position:'relative',
-        height:900,
+        height:"100%",
         // '@global': {
         //     '*::-webkit-scrollbar': {
         //         width: '1.3%',
@@ -24,15 +27,15 @@ const useStyles=makeStyles(()=>({
     flexTwoColumn:{
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'flex-start',
+        justifyContent: 'space-evenly',
         flexWrap: 'wrap',
     },
     sliderAndWelcome:{
-      marginTop: "14%",
+      marginTop: "16rem",
     },
     textDiv:{
-        marginLeft:"15%",
-        marginBottom:"3%",
+        // marginLeft:"15rem",
+        marginBottom:"3rem",
     },
     text:{
         color: "white",
@@ -40,24 +43,34 @@ const useStyles=makeStyles(()=>({
         fontFamily: "roboto",
     },
     slider:{
-        marginRight:"2%",
-        marginLeft:"19%",
-        width:"25em",
-        height: "2em",
+        // marginRight:"2rem",
+        // marginLeft:"19rem",
+        width:"25rem",
+        height: "2rem",
     },
     greenText:{
         color: "#008000FF"
-    }
+    },
+    sectionStyle:{
+        marginLeft:"3rem",
+    },
+    experienceDiv:{
+        marginTop:"20rem",
+    },
+
 
 }));
 
 const MainPage=()=>{
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const classes = useStyles();
+
     return(
 
         <div className={classes.canvasWrap}>
+
             <CanvasConnection/>
+
             <HeaderNavbar/>
 
             <article className={classes.flexTwoColumn+ " " + classes.sliderAndWelcome}>
@@ -75,7 +88,19 @@ const MainPage=()=>{
 
             </article>
 
-            <section>
+            <section className={classes.sectionStyle}>
+
+                <div className={classes.experienceDiv}>
+                    <Experience/>
+                </div>
+
+                {/*<div>*/}
+                {/*    <Education/>*/}
+                {/*</div>*/}
+
+                {/*<div>*/}
+                {/*    <Contact/>*/}
+                {/*</div>*/}
 
             </section>
 

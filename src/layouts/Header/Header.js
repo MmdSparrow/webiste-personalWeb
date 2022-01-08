@@ -12,7 +12,8 @@ import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 const sxStyles={
     bottomNavigation:{
         position: 'relative',
-        justifyContent: 'start',
+        display:"flex",
+        // justifyContent: 'space-evenly',
         width: '40em',
         backgroundColor: 'transparent',
     },
