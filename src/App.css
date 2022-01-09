@@ -1,7 +1,12 @@
 #root{
-  background: black linear-gradient(-8deg, transparent 93%, rgb(0, 0, 0, 0.5) 5%, rgb(0, 128, 0, 0.6) 60%, rgb(0, 128, 0, 1) 100%);
+  background-color: black;
+
+  background-image: linear-gradient(-8deg, transparent 95%, rgb(0, 0, 0, 0.5) 5%, rgb(0, 128, 0, 0.6) 60%, rgb(0, 128, 0, 1) 100%),
+                    linear-gradient(160deg, transparent 97%, rgb(0, 0, 0, 0.5) 5%, rgb(0, 128, 0, 0.6) 60%, rgb(0, 128, 0, 1) 100%);
+
+              /*linear-gradient(8deg, transparent 95%, rgb(0, 0, 0, 0.5) 5%, rgb(0, 128, 0, 0.6) 60%, rgb(0, 128, 0, 1) 100%);*/
   height: 100%;
-  /*background: black;*/
+
 }
 
 /*#root::-webkit-scrollbar {*/

@@ -16,9 +16,10 @@ const useStyles=makeStyles(()=>({
         flexDirection: 'column',
         justifyContent: 'flex-start',
         // flexWrap: 'wrap',
+        width:'100%',
     },
     divHalf:{
-        width:"49.5%",
+        width:"49.7%",
     },
     rowMargin:{
         marginBottom:"10px",

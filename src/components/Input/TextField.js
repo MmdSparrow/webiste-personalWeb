@@ -6,6 +6,7 @@ const COLOR_RED="#c50a1c"
 
 const sxStyles={
     textFieldTrue:{
+        color:"white",
         width:"100%",
         // color: COLOR_GREEN,
         '& .MuiOutlinedInput-root': {
@@ -21,6 +22,7 @@ const sxStyles={
         },
     },
     textFieldFalse:{
+        color:"white",
         width:"100%",
         // color: COLOR_RED,
         '& .MuiOutlinedInput-root': {
@@ -34,6 +36,11 @@ const sxStyles={
                 borderColor: COLOR_RED,
             },
         },
+    },
+    whiteColor:{
+        input: {
+            color: "white"
+        }
     },
 
 };
@@ -49,6 +56,9 @@ const CustomTextField=(props)=>{
                 variant="outlined"
                 sx={classes.textFieldTrue}
                 InputLabelProps = {{style: {color: "white"},}}
+                InputProps={{
+                    className: classes.whiteColor
+                }}
             />
         );
     }
@@ -63,6 +73,9 @@ const CustomTextField=(props)=>{
                 variant="outlined"
                 sx={classes.textFieldFalse}
                 InputLabelProps = {{style: {color: "white"},}}
+                InputProps={{
+                    className: classes.whiteColor
+                }}
             />
         );
     }

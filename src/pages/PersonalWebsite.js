@@ -57,7 +57,18 @@ const useStyles=makeStyles(()=>({
     experienceDiv:{
         marginTop:"20rem",
     },
-
+    partMargin:{
+      marginTop:"10rem",
+    },
+    licenseDiv:{
+        display:"flex",
+        justifyContent:"flex-end",
+        marginRight:"1rem",
+        fontFamily:"roboto",
+        fontSize:"20px",
+        fontWeight:"bold",
+        color:"white"
+    },
 
 }));
 
@@ -94,19 +105,20 @@ const MainPage=()=>{
                     <Experience/>
                 </div>
 
-                <div>
+                <div className={classes.partMargin}>
                     <Education/>
                 </div>
 
-                <div>
+                <div className={classes.partMargin}>
                     <Contact/>
                 </div>
 
             </section>
 
+            <div className={classes.licenseDiv}>
+                © 2022
+            </div>
         </div>
-
-
     );
 }
 

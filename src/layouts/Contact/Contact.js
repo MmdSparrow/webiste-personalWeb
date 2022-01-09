@@ -7,7 +7,8 @@ const useStyles=makeStyles(()=>({
     divCustomForm:{
         display:"flex",
         justifyContent:"flex-start",
-        maxWidth:"10rem",
+        width:"60rem",
+        marginLeft:'2rem',
     },
 }));
 
