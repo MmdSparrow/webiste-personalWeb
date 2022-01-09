@@ -1,45 +1,53 @@
 import {makeStyles} from "@material-ui/core";
-const COLOR_GREEN="#008000"
+import WinkTitle from "../../components/WinkTitle/WinkTitle";
+import $ from 'jquery';
+import './time_line.css'
 
 
 const useStyles=makeStyles(()=>({
-    h3Style:{
-        color:"white",
-        fontSize:"42px",
-        fontFamily:"roboto",
-    },
-    spanColor:{
-        color:COLOR_GREEN,
-        fontFamily: "roboto",
-    },
+
 }));
 
-// setInterval(function(){
-//     const arrayElements = document.getElementById('wink');
-//     // arrayElements[test,test,t];
-//     changeState(arrayElements);
-//     // arrayElements.forEach(changeState());
-// },800);
-//
-// function changeState(item) {
-//     console.log("log: "+item.style.visibility);
-//     if(item.style.visibility==="hidden"){
-//         item.style.visibility="visible";
-//     } else {
-//         item.style.visibility="hidden";
-//     }
-// }
+$('ul#time-line li').each(function(){
+    const stop = $(window).scrollTop() + $(window).height() / 1.2;
+    const litop = $(this).offset().top;
+    if (stop > litop){
+        $(this).addClass('visibility');
+    }
+});
+$(window).scroll(function(){
+    $('ul#time-line li').each(function(){
+        const stop = $(window).scrollTop() + $(window).height() / 1.2;
+        // var stop2 =$(window).scrollTop() + $(window).height()*1.2;
+        const litop = $(this).offset().top;
+        if (stop > litop){
+            $(this).addClass('visibility');
+        } else{
+            $(this).removeClass('visibility');
+        }
+    });
+});
+
 
 const Education=()=>{
     const classes=useStyles();
     return(
         <div>
-            <h3 id={"education"} className={classes.h3Style}>
-                {/*Experience<span className={"wink "+classes.span}>|</span>*/}
-                <span className={classes.spanColor}>& </span>Education<span id={"wink"} className={classes.spanColor}> |</span>
-            </h3>
-            <div>
-
+            <WinkTitle title={"Education"}/>
+            <div className="body">
+                <ul id="time-line">
+                    <li>
+                        <div>
+                            <span className="font-text"><span>2019 - present</span><br/><span>Bachelor of computer engineering</span><br/><span>AmirKabir University of Technology</span></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span
+                                className="font-text"><span>2016 - 2019</span><br/><span>Diploma of mathematics science</span><br/><span>Harati high school</span></span>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     );

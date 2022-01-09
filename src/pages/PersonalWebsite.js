@@ -98,9 +98,9 @@ const MainPage=()=>{
                     <Education/>
                 </div>
 
-                {/*<div>*/}
-                {/*    <Contact/>*/}
-                {/*</div>*/}
+                <div>
+                    <Contact/>
+                </div>
 
             </section>
 

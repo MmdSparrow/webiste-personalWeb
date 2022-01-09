@@ -1,31 +1,25 @@
 import CustomForm from "../../components/EmailForm/Form";
+import WinkTitle from "../../components/WinkTitle/WinkTitle";
+import {makeStyles} from "@material-ui/core";
 
-const sxStyles={
-    bottomNavigation:{
-        position: 'relative',
-        justifyContent: 'start',
-        width: '40em',
-        backgroundColor: 'transparent',
+
+const useStyles=makeStyles(()=>({
+    divCustomForm:{
+        display:"flex",
+        justifyContent:"flex-start",
+        maxWidth:"10rem",
     },
-    bottomNavigationAction:{
-        color: "#efeaea",
-        '&:hover': {
-            transform: "scale(1.15)",
-        },
-        '&.MuiBottomNavigationAction-root.Mui-selected':{
-            transform: "scale(1.15)",
-            color: '#000000'
-        }
-    }
-};
+}));
+
 
 const Contact=()=>{
+    const classes=useStyles();
     return(
         <div>
-            <h2>
-
-            </h2>
-            <CustomForm/>
+            <WinkTitle title={"Contact"}/>
+            <div className={classes.divCustomForm}>
+                <CustomForm/>
+            </div>
         </div>
     );
 }

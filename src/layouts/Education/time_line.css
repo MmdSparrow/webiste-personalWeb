@@ -1,0 +1,62 @@
+ul#time-line {
+  padding: 2em 0;
+  margin: 0;
+  list-style-type: none;
+  position: relative;
+  overflow: hidden; }
+
+ul#time-line:after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 0.25em;
+  border-radius: 20px;
+  background: #008000;
+  left: 0;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+  margin: auto; }
+
+ul#time-line li {
+  width: 50%;
+  margin-left: auto;
+  text-align: left;
+  transition: all cubic-bezier(0.68, 0.55, 0.265, 1.55) 0.5s;
+  transform: rotateX(90deg); }
+
+ul#time-line li:nth-child(2n) {
+  margin-left: 0;
+  margin-right: auto;
+  text-align: right; }
+
+ul#time-line li div {
+  width: 70%;
+  display: inline-block;
+  background: #111111;
+  padding: 1em;
+  margin: 20px;
+  border-radius: 30px;
+  position: relative; }
+
+ul#time-line li:nth-child(2n) div:before {
+  right: -30px;
+  left: auto; }
+
+ul#time-line li:nth-child(2n) div:after {
+  left: 100%;
+  right: auto;
+  border-color: transparent transparent transparent #111111; }
+
+ul#time-line li.visibility {
+  transform: rotateX(0deg) perspective(360px); }
+
+#time-line > li > div > span > span:first-child {
+  font-size: 1em;
+  color: #787878; }
+
+#time-line > li > div > span > span:nth-child(3) {
+  font-size: 1em;
+  color: #008000; }
+
+/*# sourceMappingURL=time_line.css.map */

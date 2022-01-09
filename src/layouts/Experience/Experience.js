@@ -2,6 +2,7 @@ import { ReactComponent as FanapLogo } from '../../assets/Images/fanap-green.svg
 import { ReactComponent as IMHLogo } from '../../assets/Images/mathhouse-green.svg';
 import {makeStyles} from "@material-ui/core";
 import '../../fonts/Fonts.css'
+import WinkTitle from "../../components/WinkTitle/WinkTitle";
 const COLOR_GREEN="#008000"
 
 const useStyles=makeStyles(()=>({
@@ -39,30 +40,13 @@ const useStyles=makeStyles(()=>({
     },
 }));
 
-setInterval(function(){
-    const arrayElements = document.getElementById('wink');
-    // arrayElements[test,test,t];
-    changeState(arrayElements);
-    // arrayElements.forEach(changeState());
-},800);
 
-function changeState(item) {
-    console.log("log: "+item.style.visibility);
-    if(item.style.visibility==="hidden"){
-        item.style.visibility="visible";
-    } else {
-        item.style.visibility="hidden";
-    }
-}
 
 const Experience=()=>{
     const classes=useStyles();
     return(
         <div>
-            <h3 id={"experience"} className={classes.h3Style}>
-                {/*Experience<span className={"wink "+classes.span}>|</span>*/}
-                <span className={classes.spanColor}>& </span>Experience<span id={"wink"} className={classes.spanColor}> |</span>
-            </h3>
+            <WinkTitle title={"Experience"}/>
             <div className={classes.flexTwoColumn}>
                 <div className={classes.flexColumn}>
                     <FanapLogo fill="green" stroke="green" width={"10rem"} height={"10rem"}/>

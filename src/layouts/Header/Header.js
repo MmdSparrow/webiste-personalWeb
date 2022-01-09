@@ -30,6 +30,7 @@ const sxStyles={
     }
 };
 
+
 const HeaderNavbar=()=> {
 
     const [value, setValue] = React.useState('');
@@ -44,6 +45,7 @@ const HeaderNavbar=()=> {
                 label="about"
                 value="about"
                 icon={<PermIdentityOutlinedIcon />}
+                href={"#about"}
             />
             <BottomNavigationAction
                 sx={sxStyles.bottomNavigationAction}
@@ -56,6 +58,7 @@ const HeaderNavbar=()=> {
                 label="experience"
                 value="experience"
                 icon={<WorkOutlineOutlinedIcon />}
+                href={"#experience"}
             />
             <BottomNavigationAction
                 sx={sxStyles.bottomNavigationAction}
