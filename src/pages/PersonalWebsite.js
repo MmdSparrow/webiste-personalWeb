@@ -6,6 +6,8 @@ import '../fonts/Fonts.css'
 import Experience from "../layouts/Experience/Experience";
 import Education from "../layouts/Education/Education";
 import Contact from "../layouts/Contact/Contact";
+import Portfolio from "../layouts/Portfolio/Portfolio";
+import Courses from "../layouts/Courses/Courses";
 
 const useStyles=makeStyles(()=>({
     canvasWrap:{
@@ -64,6 +66,7 @@ const useStyles=makeStyles(()=>({
         display:"flex",
         justifyContent:"flex-end",
         marginRight:"1rem",
+        paddingBottom:"1rem",
         fontFamily:"roboto",
         fontSize:"20px",
         fontWeight:"bold",
@@ -109,11 +112,22 @@ const MainPage=()=>{
                     <Education/>
                 </div>
 
+                <div>
+                    <Portfolio/>
+                </div>
+
+                <div>
+                    <Courses/>
+                </div>
+
                 <div className={classes.partMargin}>
                     <Contact/>
                 </div>
 
+
+
             </section>
+
 
             <div className={classes.licenseDiv}>
                 © 2022

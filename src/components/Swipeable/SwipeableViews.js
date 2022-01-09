@@ -54,6 +54,7 @@ class ViewAutoPlay extends React.Component {
                             Full Stack Developer
                         </h2>
                         <p style={textStyles.text}>
+                            Prolific, full stack web developer with a passion for data science and artificial intelligence.<br/>
                             C, C++ (icon)   Java (Spring / Spring Boot) (icons)   python (Django) (icons)
                             HTML, CSS, JavaScript (React) (icons)
                             MySQL, Oracle (icons)
@@ -75,7 +76,7 @@ class ViewAutoPlay extends React.Component {
                         </h2>
                         <p style={textStyles.text}>
                             Dota2 player (icons)
-                            my steam account:
+                            steam ID:
                         </p>
                     </div>
                 </AutoPlaySwipeableViews>
