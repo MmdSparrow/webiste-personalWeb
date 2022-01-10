@@ -1,6 +1,7 @@
 {
   "name": "personalweb",
   "version": "0.1.0",
+  "homepage": "https://sayedmohammadali-mirkazemi.ir/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
