@@ -17,7 +17,7 @@ const Contact=()=>{
     const classes=useStyles();
     return(
         <div>
-            <WinkTitle title={"Contact"}/>
+            <WinkTitle id={"contact"} title={"Contact"}/>
             <div className={classes.divCustomForm}>
                 <CustomForm/>
             </div>

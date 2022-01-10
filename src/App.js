@@ -4,6 +4,15 @@ import CustomTextField from "./components/Input/TextField";
 import MainPage from "./pages/PersonalWebsite";
 import CustomForm from "./components/EmailForm/Form";
 
+// document.querySelectorAll('.bna').forEach(anchor => {
+//   anchor.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     console.log("it select this mf......................................")
+//     document.querySelector(this.getAttribute('href')).scrollIntoView({
+//       behavior: 'smooth'
+//     });
+//   });
+// });
 
 function App() {
   return (

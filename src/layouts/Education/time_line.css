@@ -31,7 +31,7 @@ ul#time-line li:nth-child(2n) {
   text-align: right; }
 
 ul#time-line li div {
-  width: 25rem;
+  width: 20rem;
   display: inline-block;
   background: #111111;
   padding: 1em;
@@ -50,13 +50,5 @@ ul#time-line li:nth-child(2n) div:after {
 
 ul#time-line li.visibility {
   transform: rotateX(0deg) perspective(360px); }
-
-#time-line > li > div > span > span:first-child {
-  font-size: 1em;
-  color: #787878; }
-
-#time-line > li > div > span > span:nth-child(3) {
-  font-size: 1em;
-  color: #008000; }
 
 /*# sourceMappingURL=time_line.css.map */

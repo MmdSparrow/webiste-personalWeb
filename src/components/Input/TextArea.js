@@ -53,6 +53,9 @@ const CustomTextArea=(props)=> {
                 // onChange={handleChange}
                 sx={sxStyles.textFieldTrue}
                 InputLabelProps = {{style: {color: "white"},}}
+                InputProps={{
+                    style: {color: "white"},
+                }}
             />
         );
     }else {
@@ -66,6 +69,9 @@ const CustomTextArea=(props)=> {
                 // onChange={handleChange}
                 sx={sxStyles.textFieldFalse}
                 InputLabelProps = {{style: {color: "white"},}}
+                InputProps={{
+                    style: {color: "white"},
+                }}
             />
         );
     }

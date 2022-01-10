@@ -4,16 +4,12 @@ const COLOR_GREEN="#008000"
 
 setInterval(function(){
     const arrayElements = document.getElementsByClassName('wink');
-    console.log("size........................");
-    console.log(arrayElements.length);
-    console.log("size........................");
     for (let i = 0; i < arrayElements.length; i++) {
         changeState(arrayElements[i]);
     }
 },800);
 
 function changeState(item) {
-    console.log("log: "+item.style.visibility);
     if(item.style.visibility==="hidden"){
         item.style.visibility="visible";
     } else {
@@ -36,9 +32,9 @@ const useStyles=makeStyles(()=>({
 const WinkTitle=(props)=>{
     const classes=useStyles();
     return(
-        <h3 id={"experience"} className={classes.h3Style}>
+        <h2 id={props.id} className={classes.h3Style}>
             <span className={classes.spanColor}>&</span> {props.title} <span className={"wink "+classes.spanColor}>|</span>
-        </h3>
+        </h2>
     );
 }
 export default WinkTitle;

@@ -6,20 +6,23 @@ import CloudDownloadOutlinedIcon from '@mui/icons-material/CloudDownloadOutlined
 import ClassOutlinedIcon from '@mui/icons-material/ClassOutlined'; 	                //course
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';                //education
 import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';      //work
-import SpeedOutlinedIcon from '@mui/icons-material/SpeedOutlined';                  //speed
-import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';    //person
+import '../../fonts/Fonts.css'
+
+
 
 const sxStyles={
     bottomNavigation:{
         position: 'relative',
         display:"flex",
         // justifyContent: 'space-evenly',
-        width: '40em',
+        width: '30em',
         backgroundColor: 'transparent',
 
     },
     bottomNavigationAction:{
         color: "#efeaea",
+        fontFamily: "roboto",
+        fontSize:"30px",
         '&:hover': {
             transform: "scale(1.15)",
         },
@@ -30,55 +33,79 @@ const sxStyles={
     }
 };
 
+// eslint-disable-next-line no-undef
+// $(document).ready(function() {
+//
+//     // eslint-disable-next-line no-undef
+//     var scrollLink = $('.scroll');
+//
+//     // Smooth scrolling
+//     scrollLink.click(function (e) {
+//         e.preventDefault();
+//         // eslint-disable-next-line no-undef
+//         $('body,html').animate({
+//             // eslint-disable-next-line no-undef
+//             scrollTop: $(this.hash).offset().top
+//         }, 1000);
+//     });
+// });
 
 const HeaderNavbar=()=> {
 
     const [value, setValue] = React.useState('');
     const handleChange = (event, newValue) => {
         setValue(newValue);
+
+        console.log("size..........................................")
+        console.log(document.querySelectorAll(".bna[href='#education']").length)
+        console.log("size..........................................")
+        // myRef=rea
+        // scroll()
+        document.querySelectorAll(".bna[href='#education']")[0].scrollIntoView({
+            behavior: 'smooth'
+        });
+
     };
+
+
 
     return (
         <BottomNavigation sx={sxStyles.bottomNavigation} value={value} onChange={handleChange}>
             <BottomNavigationAction
-                sx={sxStyles.bottomNavigationAction}
-                label="about"
-                value="about"
-                icon={<PermIdentityOutlinedIcon />}
-                href={"#about"}
-            />
-            <BottomNavigationAction
-                sx={sxStyles.bottomNavigationAction}
-                label="skill"
-                value="skill"
-                icon={<SpeedOutlinedIcon />}
-            />
-            <BottomNavigationAction
+                className={"bna"}
                 sx={sxStyles.bottomNavigationAction}
                 label="experience"
                 value="experience"
                 icon={<WorkOutlineOutlinedIcon />}
-                href={"#experience"}
+                // href={"#experience"}
+
             />
             <BottomNavigationAction
+                className={"bna"}
                 sx={sxStyles.bottomNavigationAction}
                 label="education"
                 value="education"
                 icon={<SchoolOutlinedIcon />}
+                href="#education"
             />
             <BottomNavigationAction
+                className={"bna"}
                 sx={sxStyles.bottomNavigationAction}
                 label="courses"
                 value="courses"
                 icon={<ClassOutlinedIcon />}
+                href={"#courses"}
             />
             <BottomNavigationAction
+                className={"bna"}
                 sx={sxStyles.bottomNavigationAction}
                 label="contact"
                 value="contact"
                 icon={<ContactMailOutlinedIcon />}
+                href={"#contact"}
             />
             <BottomNavigationAction
+                className={"bna"}
                 sx={sxStyles.bottomNavigationAction}
                 label="download"
                 value="download"

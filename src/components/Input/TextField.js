@@ -37,16 +37,17 @@ const sxStyles={
             },
         },
     },
-    whiteColor:{
-        input: {
-            color: "white"
-        }
+    input:{
+      color:"white",
     },
 
 };
 
+
+
 const CustomTextField=(props)=>{
     const classes=sxStyles;
+
     if(props.isValid){
         return (
             <TextField
@@ -57,8 +58,9 @@ const CustomTextField=(props)=>{
                 sx={classes.textFieldTrue}
                 InputLabelProps = {{style: {color: "white"},}}
                 InputProps={{
-                    className: classes.whiteColor
+                    style: {color: "white"},
                 }}
+                autoComplete={'false'}
             />
         );
     }
@@ -74,7 +76,7 @@ const CustomTextField=(props)=>{
                 sx={classes.textFieldFalse}
                 InputLabelProps = {{style: {color: "white"},}}
                 InputProps={{
-                    className: classes.whiteColor
+                    style: {color: "white"},
                 }}
             />
         );

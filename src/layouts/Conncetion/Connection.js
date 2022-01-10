@@ -81,6 +81,17 @@ const canvasDots = function () {
     };
 
     function createDots() {
+        const canvas = document.querySelector('canvas'),
+            ctx = canvas.getContext('2d'),
+            colorDot = '#CECECE',
+            color = '#24ec24';
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        canvas.style.display = 'block';
+        ctx.fillStyle = colorDot;
+        ctx.lineWidth = .1;
+        ctx.strokeStyle = color;
+
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         let dot;
         for (let i = 0; i < dots.nb; i++) {
@@ -99,16 +110,17 @@ const canvasDots = function () {
         mousePosition.y = parameter.pageY;
     }
 
-    mousePosition.x = window.innerWidth / 2;
-    mousePosition.y = window.innerHeight / 2;
+    // mousePosition.x = window.innerWidth / 2;
+    // mousePosition.y = window.innerHeight / 2;
 
     setInterval(createDots, 1000 / 30);
 };
 
+
+
 window.onload = function() {
     canvasDots();
 };
-
 
 const useStyles=makeStyles(()=>({
     background:{
@@ -119,13 +131,14 @@ const useStyles=makeStyles(()=>({
         left: 0,
         right: 0,
         zIndex: 0,
-        height:"52.1em",
-        width:"100%"
+        height:"100%",
+        width:"100%",
     },
 }));
 
 const CanvasConnection = () => {
     const classes=useStyles();
+
 
     return(
         // eslint-disable-next-line no-useless-concat

@@ -33,7 +33,7 @@ const useStyles=makeStyles(()=>({
         flexWrap: 'wrap',
     },
     sliderAndWelcome:{
-      marginTop: "16rem",
+      marginTop: "14rem",
     },
     textDiv:{
         // marginLeft:"15rem",
@@ -57,7 +57,7 @@ const useStyles=makeStyles(()=>({
         marginLeft:"3rem",
     },
     experienceDiv:{
-        marginTop:"20rem",
+        marginTop:"23rem",
     },
     partMargin:{
       marginTop:"10rem",
@@ -112,9 +112,9 @@ const MainPage=()=>{
                     <Education/>
                 </div>
 
-                <div>
-                    <Portfolio/>
-                </div>
+                {/*<div>*/}
+                {/*    <Portfolio/>*/}
+                {/*</div>*/}
 
                 <div>
                     <Courses/>
