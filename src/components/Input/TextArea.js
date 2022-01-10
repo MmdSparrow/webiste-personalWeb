@@ -56,6 +56,7 @@ const CustomTextArea=(props)=> {
                 InputProps={{
                     style: {color: "white"},
                 }}
+                autoComplete={'off'}
             />
         );
     }else {
@@ -72,6 +73,7 @@ const CustomTextArea=(props)=> {
                 InputProps={{
                     style: {color: "white"},
                 }}
+                autoComplete={'off'}
             />
         );
     }

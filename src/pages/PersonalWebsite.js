@@ -11,20 +11,7 @@ import Courses from "../layouts/Courses/Courses";
 
 const useStyles=makeStyles(()=>({
     canvasWrap:{
-        // position:'relative',
         height:"100%",
-        // '@global': {
-        //     '*::-webkit-scrollbar': {
-        //         width: '1.3%',
-        //         maxWidth: '5px'
-        //     },
-        //     '*::-webkit-scrollbar-thumb': {
-        //         backgroundColor: 'white'
-        //     },
-        //     '*:focus': {
-        //         outline: 'none'
-        //     }
-        // }
     },
     flexTwoColumn:{
         display: 'flex',

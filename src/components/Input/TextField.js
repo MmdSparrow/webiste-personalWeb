@@ -60,7 +60,7 @@ const CustomTextField=(props)=>{
                 InputProps={{
                     style: {color: "white"},
                 }}
-                autoComplete={'false'}
+                autoComplete={'off'}
             />
         );
     }
@@ -78,6 +78,7 @@ const CustomTextField=(props)=>{
                 InputProps={{
                     style: {color: "white"},
                 }}
+                autoComplete={'off'}
             />
         );
     }

@@ -7,12 +7,12 @@ import ClassOutlinedIcon from '@mui/icons-material/ClassOutlined'; 	            
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';                //education
 import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';      //work
 import '../../fonts/Fonts.css'
-
+import $ from 'jquery';
 
 
 const sxStyles={
     bottomNavigation:{
-        position: 'relative',
+        position: "relative",
         display:"flex",
         // justifyContent: 'space-evenly',
         width: '30em',
@@ -33,79 +33,62 @@ const sxStyles={
     }
 };
 
-// eslint-disable-next-line no-undef
-// $(document).ready(function() {
-//
-//     // eslint-disable-next-line no-undef
-//     var scrollLink = $('.scroll');
-//
-//     // Smooth scrolling
-//     scrollLink.click(function (e) {
-//         e.preventDefault();
-//         // eslint-disable-next-line no-undef
-//         $('body,html').animate({
-//             // eslint-disable-next-line no-undef
-//             scrollTop: $(this.hash).offset().top
-//         }, 1000);
-//     });
-// });
+
+
 
 const HeaderNavbar=()=> {
 
     const [value, setValue] = React.useState('');
     const handleChange = (event, newValue) => {
         setValue(newValue);
+        if(newValue!=='download' && newValue!==''){
+            document.getElementById(newValue).scrollIntoView({behavior:"smooth"})
+        }
+    };
 
-        console.log("size..........................................")
-        console.log(document.querySelectorAll(".bna[href='#education']").length)
-        console.log("size..........................................")
-        // myRef=rea
-        // scroll()
-        document.querySelectorAll(".bna[href='#education']")[0].scrollIntoView({
-            behavior: 'smooth'
-        });
-
+    const handleChangeScroll = (newValue) => {
+        setValue(newValue);
+        if(newValue!=='download' && newValue!==''){
+            document.getElementById(newValue).scrollIntoView({behavior:"smooth"})
+        }
     };
 
 
+    $(window).scroll(function (){
+        var scrollLocation=$(this).scrollTop();
+        console.log("test....................")
+        if(scrollLocation<120){
+            handleChangeScroll('')
+        }
+    })
 
     return (
-        <BottomNavigation sx={sxStyles.bottomNavigation} value={value} onChange={handleChange}>
+        <BottomNavigation className={'bottom-navigation'} sx={sxStyles.bottomNavigation} value={value} onChange={handleChange}>
             <BottomNavigationAction
-                className={"bna"}
                 sx={sxStyles.bottomNavigationAction}
                 label="experience"
                 value="experience"
                 icon={<WorkOutlineOutlinedIcon />}
-                // href={"#experience"}
-
             />
             <BottomNavigationAction
-                className={"bna"}
                 sx={sxStyles.bottomNavigationAction}
                 label="education"
                 value="education"
                 icon={<SchoolOutlinedIcon />}
-                href="#education"
             />
             <BottomNavigationAction
-                className={"bna"}
                 sx={sxStyles.bottomNavigationAction}
                 label="courses"
                 value="courses"
                 icon={<ClassOutlinedIcon />}
-                href={"#courses"}
             />
             <BottomNavigationAction
-                className={"bna"}
                 sx={sxStyles.bottomNavigationAction}
                 label="contact"
                 value="contact"
                 icon={<ContactMailOutlinedIcon />}
-                href={"#contact"}
             />
             <BottomNavigationAction
-                className={"bna"}
                 sx={sxStyles.bottomNavigationAction}
                 label="download"
                 value="download"
