@@ -22,11 +22,12 @@ const useStyles=makeStyles(()=>({
         flexWrap: 'wrap',
     },
     sliderAndWelcome:{
-        paddingTop: "20rem",
+        marginTop: "15rem",
         marginBottom:"11rem",
     },
     textDiv:{
         marginBottom:"16rem",
+        marginLeft:"1rem",
     },
     text:{
         color: "white",
@@ -38,6 +39,8 @@ const useStyles=makeStyles(()=>({
         // marginLeft:"19rem",
         width:"25rem",
         height: "2rem",
+        marginLeft:"1rem",
+        marginBottom:"23rem",
     },
     greenText:{
         color: "#008000FF"
@@ -63,6 +66,9 @@ const useStyles=makeStyles(()=>({
         color:"white",
         marginTop:"3rem",
     },
+    marginRightHeader:{
+      marginLeft:"1rem",
+    },
 
 }));
 
@@ -77,7 +83,10 @@ const MainPage=()=>{
         <div className={classes.pageStyle}>
             <CanvasConnection/>
 
-            <CustomHeader/>
+            <div className={classes.marginRightHeader}>
+                <CustomHeader/>
+            </div>
+
             <div>
                 <article className={classes.flexTwoColumn+ " " + classes.sliderAndWelcome}>
                     <div className={classes.textDiv}>

@@ -33,20 +33,16 @@ const sxStyle={
 const useStyles=makeStyles(()=>({
     container:{
         backgroundColor: "transparent",
-        // backgroundColor: COLOR_GREEN,
         // position:"fixed",
         display:"flex",
         flexDirection:"row",
-        // flexWrap:"wrap",
-        height:"100%",
-        rowGap:"2em",
-    },
-    firstIcon:{
-        marginLeft:"1rem",
-
+        justifyContent:"flex-start",
+        flexWrap:"wrap",
+        width:"100%",
+        columnGap:"2rem",
+        // paddingLeft:"1rem",
     },
 }));
-
 
 
 const CustomHeader=()=> {
@@ -69,8 +65,7 @@ const CustomHeader=()=> {
                 edge="start"
                 color="inherit"
                 onClick={()=>scrollToRef('experience')}
-                sx={sxStyle.iconButtonStyleFirst}
-                className={classes.firstIcon}
+                sx={sxStyle.iconButtonStyle}
             >
                 <WorkOutlineOutlinedIcon sx={sxStyle.iconStyle} />
             </IconButton>
@@ -92,7 +87,6 @@ const CustomHeader=()=> {
                 color="inherit"
                 onClick={()=>scrollToRef('courses')}
                 sx={sxStyle.iconButtonStyle}
-
             >
                 <ClassOutlinedIcon sx={sxStyle.iconStyle}/>
             </IconButton>
@@ -103,7 +97,6 @@ const CustomHeader=()=> {
                 color="inherit"
                 onClick={()=>scrollToRef('contact')}
                 sx={sxStyle.iconButtonStyle}
-
             >
                 <ContactMailOutlinedIcon sx={sxStyle.iconStyle}/>
             </IconButton>
