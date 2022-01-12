@@ -14,12 +14,14 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const styles = {
     root: {
         position: 'relative',
-        backgroundColor: 'transition'
+        backgroundColor: 'transition',
+        width:"22rem",
     },
     slide: {
         // padding: 15,
         // minHeight: 100,
-        backgroundColor: 'transition'
+        backgroundColor: 'transition',
+
     },
 };
 const textStyles={

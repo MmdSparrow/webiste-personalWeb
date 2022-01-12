@@ -18,10 +18,12 @@ import ButtonAppBar from "./layouts/Header/Header";
 function App() {
   return (
 
-      // <MainPage/>
-
+      <MainPage/>
+      // <div style={{width:"100%"}}>
+      //   test.....................
+      // </div>
       // test
-      <ButtonAppBar/>
+      // <ButtonAppBar/>
       // <div>
       //   <MultilineTextFields isValid={true}/>
       //   <CustomTextField isValid={true} label={"message"}/>

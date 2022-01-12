@@ -7,35 +7,30 @@ import Experience from "../layouts/Experience/Experience";
 import Education from "../layouts/Education/Education";
 import Contact from "../layouts/Contact/Contact";
 import Courses from "../layouts/Courses/Courses";
+import CustomHeader from "../layouts/Header/Header";
 
 const useStyles=makeStyles(()=>({
-    canvasWrap:{
-        height:"100%",
+    pageStyle:{
+        // width:"100%",
+        // backgroundSize:"cover",
+        // position:"relative",
     },
     flexTwoColumn:{
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-evenly',
+        justifyContent: 'space-around',
         flexWrap: 'wrap',
     },
-    flexColumn:{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        // flexWrap: 'wrap',
-
-    },
     sliderAndWelcome:{
-        // marginTop: "14rem",
-        marginBottom:"27rem",
+        paddingTop: "20rem",
+        marginBottom:"11rem",
     },
     textDiv:{
-        // marginLeft:"15rem",
-        marginBottom:"3rem",
+        marginBottom:"16rem",
     },
     text:{
         color: "white",
-        fontSize: "70px",
+        fontSize: "66px",
         fontFamily: "roboto",
     },
     slider:{
@@ -71,60 +66,61 @@ const useStyles=makeStyles(()=>({
 
 }));
 
+
 const MainPage=()=>{
     const classes = useStyles();
 
+
+
     return(
 
-        <div className={classes.canvasWrap}>
-
+        <div className={classes.pageStyle}>
             <CanvasConnection/>
-            {/*<HeaderNavbar/>*/}
-            <article className={classes.flexTwoColumn+ " " + classes.sliderAndWelcome}>
 
-                <div className={classes.textDiv}>
-                    <span className={classes.text}>
-                        Hi<span className={classes.greenText}>,</span><br/>
-                        I<span className={classes.greenText}>'</span>m<span className={classes.greenText}> Mohammad Ali</span>
-                    </span>
+            <CustomHeader/>
+            <div>
+                <article className={classes.flexTwoColumn+ " " + classes.sliderAndWelcome}>
+                    <div className={classes.textDiv}>
+                        <span className={classes.text}>
+                            Hi<span className={classes.greenText}>,</span><br/>
+                            I<span className={classes.greenText}>'</span>m<span className={classes.greenText}> Mohammad Ali</span>
+                        </span>
+                    </div>
+
+                    <div className={classes.slider}>
+                        <ViewAutoPlay />
+                    </div>
+
+                </article>
+
+                <section className={classes.sectionStyle}>
+
+                    <div className={classes.partMargin}>
+                        <Experience/>
+                    </div>
+
+                    <div className={classes.partMargin}>
+                        <Education/>
+                    </div>
+
+                    {/*<div>*/}
+                    {/*    <Portfolio/>*/}
+                    {/*</div>*/}
+
+                    <div>
+                        <Courses/>
+                    </div>
+
+                    <div className={classes.partMargin + " " + classes.contactDiv}>
+                        <Contact/>
+                    </div>
+                </section>
+                <div className={classes.licenseDiv}>
+                    © 2022
                 </div>
-
-                <div className={classes.slider}>
-                    <ViewAutoPlay />
-                </div>
-
-            </article>
-
-            <section className={classes.sectionStyle}>
-
-                <div className={classes.partMargin}>
-                    <Experience/>
-                </div>
-
-                <div className={classes.partMargin}>
-                    <Education/>
-                </div>
-
-                {/*<div>*/}
-                {/*    <Portfolio/>*/}
-                {/*</div>*/}
-
-                <div>
-                    <Courses/>
-                </div>
-
-                <div className={classes.partMargin + " " + classes.contactDiv}>
-                    <Contact/>
-                </div>
-
-
-
-            </section>
-
-
-            <div className={classes.licenseDiv}>
-                © 2022
             </div>
+
+
         </div>
     );
 }

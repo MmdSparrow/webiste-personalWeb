@@ -7,11 +7,11 @@ const useStyles=makeStyles(()=>({
     divCustomForm:{
         display:"flex",
         justifyContent:"flex-start",
-        // width:"100%",
         marginLeft:'2rem',
-        // marginRight:'1rem',
+        maxWidth:"70rem",
     },
 }));
+
 
 
 const Contact=()=>{

@@ -32,6 +32,7 @@ const useStyles=makeStyles(()=>({
         fontSize:"20px",
         color:"white",
         marginTop:"0",
+        lineHeight:1.6,
     },
 }));
 

@@ -30,6 +30,7 @@ const useStyles=makeStyles(()=>({
         fontSize:"20px",
         color:"white",
         marginTop:"0",
+
     },
 }));
 
@@ -44,7 +45,7 @@ const Courses=()=>{
             <div className={classes.flexTwoColumn}>
 
                 <div className={classes.flexColumn}>
-                    <img src={require('../../assets/Images/course-summer-1400.jpg')} alt="number theory" width="400rem" height="400rem" />
+                    {/*<img src={require('../../assets/Images/course-summer-1400.jpg')} alt="number theory" width="400rem" height="400rem" />*/}
                     <h3 className={classes.h3Style}>
                         Number Theory
                     </h3>
@@ -52,7 +53,7 @@ const Courses=()=>{
                 </div>
 
                 <div className={classes.flexColumn}>
-                    <img src={require('../../assets/Images/course-fall-1400.jpg')} alt="number theory" width="400rem" height="400rem" />
+                    {/*<img src={require('../../assets/Images/course-fall-1400.jpg')} alt="number theory" width="400rem" height="400rem" />*/}
                     <h3 className={classes.h3Style}>
                         Number Theory
                     </h3>
