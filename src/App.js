@@ -3,6 +3,7 @@ import CustomTextArea from "./components/Input/TextArea";
 import CustomTextField from "./components/Input/TextField";
 import MainPage from "./pages/PersonalWebsite";
 import CustomForm from "./components/EmailForm/Form";
+import ButtonAppBar from "./layouts/Header/Header";
 
 // document.querySelectorAll('.bna').forEach(anchor => {
 //   anchor.addEventListener('click', function (e) {
@@ -17,9 +18,10 @@ import CustomForm from "./components/EmailForm/Form";
 function App() {
   return (
 
-      <MainPage/>
+      // <MainPage/>
 
       // test
+      <ButtonAppBar/>
       // <div>
       //   <MultilineTextFields isValid={true}/>
       //   <CustomTextField isValid={true} label={"message"}/>
