@@ -130,7 +130,6 @@ const useStyles=makeStyles(()=>({
         bottom: 0,
         left: 0,
         right: 0,
-        zIndex: 0,
         height:"100%",
         width:"100%",
     },

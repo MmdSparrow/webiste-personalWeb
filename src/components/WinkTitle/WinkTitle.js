@@ -22,6 +22,7 @@ const useStyles=makeStyles(()=>({
         color:"white",
         fontSize:"42px",
         fontFamily:"roboto",
+        marginBottom:"2rem",
     },
     spanColor:{
         color:COLOR_GREEN,

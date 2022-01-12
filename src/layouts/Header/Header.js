@@ -13,10 +13,10 @@ import $ from 'jquery';
 const sxStyles={
     bottomNavigation:{
         position: "relative",
-        display:"flex",
         // justifyContent: 'space-evenly',
-        width: '30em',
+        width: '13rem',
         backgroundColor: 'transparent',
+        marginLeft:"1rem",
 
     },
     bottomNavigationAction:{

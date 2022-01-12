@@ -18,8 +18,16 @@ const useStyles=makeStyles(()=>({
         justifyContent: 'space-evenly',
         flexWrap: 'wrap',
     },
+    flexColumn:{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        // flexWrap: 'wrap',
+
+    },
     sliderAndWelcome:{
-      marginTop: "14rem",
+        // marginTop: "14rem",
+        marginBottom:"27rem",
     },
     textDiv:{
         // marginLeft:"15rem",
@@ -42,11 +50,12 @@ const useStyles=makeStyles(()=>({
     sectionStyle:{
         marginLeft:"3rem",
     },
-    experienceDiv:{
-        marginTop:"23rem",
-    },
     partMargin:{
-      marginTop:"10rem",
+        marginTop:"10rem",
+    },
+    contactDiv:{
+        marginRight:"1rem",
+        width:"100%",
     },
     licenseDiv:{
         display:"flex",
@@ -56,7 +65,8 @@ const useStyles=makeStyles(()=>({
         fontFamily:"roboto",
         fontSize:"20px",
         fontWeight:"bold",
-        color:"white"
+        color:"white",
+        marginTop:"3rem",
     },
 
 }));
@@ -69,14 +79,12 @@ const MainPage=()=>{
         <div className={classes.canvasWrap}>
 
             <CanvasConnection/>
-
-            <HeaderNavbar/>
-
+            {/*<HeaderNavbar/>*/}
             <article className={classes.flexTwoColumn+ " " + classes.sliderAndWelcome}>
 
                 <div className={classes.textDiv}>
                     <span className={classes.text}>
-                        Hi,<br/>
+                        Hi<span className={classes.greenText}>,</span><br/>
                         I<span className={classes.greenText}>'</span>m<span className={classes.greenText}> Mohammad Ali</span>
                     </span>
                 </div>
@@ -89,7 +97,7 @@ const MainPage=()=>{
 
             <section className={classes.sectionStyle}>
 
-                <div className={classes.experienceDiv}>
+                <div className={classes.partMargin}>
                     <Experience/>
                 </div>
 
@@ -105,7 +113,7 @@ const MainPage=()=>{
                     <Courses/>
                 </div>
 
-                <div className={classes.partMargin}>
+                <div className={classes.partMargin + " " + classes.contactDiv}>
                     <Contact/>
                 </div>
 

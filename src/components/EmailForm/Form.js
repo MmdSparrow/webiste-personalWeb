@@ -16,41 +16,48 @@ const useStyles=makeStyles(()=>({
         flexDirection: 'column',
         justifyContent: 'flex-start',
         // flexWrap: 'wrap',
-        width:'100%',
-    },
-    divHalf:{
-        width:"49.7%",
+
     },
     rowMargin:{
-        marginBottom:"10px",
+        marginBottom:"0.7rem",
     },
     columnMargin:{
-        marginRight:"5px",
-    }
+        marginRight:"1rem",
+    },
+    fullWidth:{
+      width:"99%",
+    },
+    halfWidth:{
+        width:"49%",
+    },
+    nearFullWidth:{
+      width:"98.2%",
+    },
 }));
 
 const CustomForm=()=>{
     const classes=useStyles();
     return(
-        <form className={classes.flexColumn}>
 
-            <div className={classes.flexTwoColumn + " " + classes.rowMargin}>
+        <form className={classes.flexColumn + " " +classes.fullWidth}>
 
-                <div className={classes.divHalf + " " + classes.columnMargin}>
+            <div className={classes.flexTwoColumn + " " +classes.fullWidth}>
+
+                <div className={classes.columnMargin + " " + classes.rowMargin + " " +classes.halfWidth}>
                     <CustomTextField isValid={true} label={"Name"}/>
                 </div>
 
-                <div className={classes.divHalf}>
+                <div className={classes.rowMargin + " " + classes.rowMargin + " " +classes.halfWidth}>
                     <CustomTextField isValid={true} label={"Email Address"}/>
                 </div>
 
             </div>
 
-            <div className={classes.rowMargin}>
+            <div className={classes.rowMargin + " " +classes.nearFullWidth}>
                 <CustomTextField isValid={true} label={"Subject"}/>
             </div>
 
-            <div className={classes.rowMargin}>
+            <div className={classes.rowMargin + " " +classes.nearFullWidth}>
                 <CustomTextArea isValid={true} label={"Message"}/>
             </div>
 
@@ -58,6 +65,8 @@ const CustomForm=()=>{
                 <CustomButton/>
             </div>
         </form>
+
+
     );
 
 }
