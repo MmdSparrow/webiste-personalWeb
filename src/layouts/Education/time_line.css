@@ -31,7 +31,7 @@ ul#time-line li:nth-child(2n) {
   text-align: right; }
 
 ul#time-line li div {
-  width: 20rem;
+  width: 70%;
   display: inline-block;
   background: #111111;
   padding: 1em;

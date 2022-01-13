@@ -29,6 +29,7 @@ const textStyles={
         color: "#008000",
         fontSize: "40px",
         fontFamily: "roboto",
+        marginBottom:"2rem",
     },
     pStyle:{
         color:"white",
@@ -54,22 +55,12 @@ class ViewAutoPlay extends React.Component {
         return (
             <div style={styles.root}>
                 <AutoPlaySwipeableViews index={index} onChangeIndex={this.handleChangeIndex}>
-                    {/*<div style={Object.assign({}, styles.slide)}>*/}
-                    {/*    <img src={ require('../../assets/Images/profile.jpeg') } width="300em" height="300em" />*/}
-                    {/*</div>*/}
                     <div style={Object.assign({}, styles.slide)}>
                         <h2 style={textStyles.h2Style}>
                             Full Stack Developer
                         </h2>
                         <p style={textStyles.pStyle}>
                             Prolific, full stack web developer with a passion for data science and artificial intelligence.<br/>
-                             {/*<br/>*/}
-                             {/*<br/>*/}
-                             {/*<br/>*/}
-                             {/*<br/>*/}
-                             {/*<br/>*/}
-                            {/*Linux <PythonLogo fill="green" stroke="green" width={"1.5rem"} height={"1.5rem"}/> <br/>*/}
-                            {/*Git <PythonLogo fill="green" stroke="green" width={"1.5rem"} height={"1.5rem"}/> <br/>*/}
                         </p>
 
                         <ul style={textStyles.pStyle}>
@@ -93,7 +84,7 @@ class ViewAutoPlay extends React.Component {
                                 MySQL <MySqlLogo fill="green" stroke="green" width={"2.5rem"} height={"2.5rem"}/>
                             </li>
                         </ul>
-
+                        <br/>
                     </div>
                     <div style={Object.assign({}, styles.slide)}>
                         <h2 style={textStyles.h2Style}>
@@ -113,7 +104,9 @@ class ViewAutoPlay extends React.Component {
                         </p>
                     </div>
                 </AutoPlaySwipeableViews>
+
                 <Pagination dots={3} index={index} onChangeIndex={this.handleChangeIndex} />
+
             </div>
         );
     }

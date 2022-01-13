@@ -1,7 +1,6 @@
 import {makeStyles} from "@material-ui/core";
 import ViewAutoPlay from "../components/Swipeable/SwipeableViews";
 import CanvasConnection from "../layouts/Conncetion/Connection";
-import HeaderNavbar from "../layouts/Header/Header";
 import '../fonts/Fonts.css'
 import Experience from "../layouts/Experience/Experience";
 import Education from "../layouts/Education/Education";
@@ -23,7 +22,7 @@ const useStyles=makeStyles(()=>({
         flexWrap: 'wrap',
     },
     sliderAndWelcome:{
-        marginTop: "6rem",
+        marginTop: "4rem",
         paddingBottom:"11rem",
     },
     textDiv:{
@@ -36,8 +35,6 @@ const useStyles=makeStyles(()=>({
         fontFamily: "roboto",
     },
     slider:{
-        // marginRight:"2rem",
-        // marginLeft:"19rem",
         width:"25rem",
         height: "2rem",
         marginLeft:"1rem",
@@ -65,46 +62,13 @@ const useStyles=makeStyles(()=>({
         marginTop:"3rem",
     },
     partMargin:{
-        marginTop:"10rem",
+        paddingBottom:"10rem",
     }
 }));
 
-// var i = 0;
-// function move() {
-//     if (i == 0) {
-//         var elem = document.getElementById("experience");
-//         var width = 1;
-//         var interval = setInterval(frame, 50);
-//
-//         function frame() {
-//             if (width >= 100) {
-//                 // eslint-disable-next-line no-undef
-//                 clearInterval(id);
-//                 interval = 0;
-//             } else {
-//                 width++;
-//                 elem.style.width = width + "%";
-//             }
-//         }
-//     }
-// }
-// function sleep(ms) {
-//     return new Promise(
-//         resolve => setTimeout(resolve, ms)
-//     );
-// }
-
 $(function(){
     $(window).scroll(function(){
-        // console.log("scroll Top:");
-        // console.log();
         const elements = document.getElementsByClassName('noneDisplay');
-        // var testDiv = document.getElementById("experience");
-        // console.log("offset top:");
-        // console.log(testDiv.offsetTop);
-        // console.log("scroll Top:");
-        console.log($(window).scrollTop()+window.innerHeight);
-        // console.log(elements.length)
         for(let i=0; i<elements.length; i++) {
             if($(window).scrollTop()+window.innerHeight>=elements[i].offsetTop) {
                 elements[i].style.marginTop=0;
@@ -149,13 +113,13 @@ const MainPage=()=>{
                 <section className={classes.sectionStyle}>
 
                     {/*<div className={classes.partMargin}>*/}
-                        <div className={"noneDisplay"}>
+                        <div className={"noneDisplay "+classes.partMargin}>
                                 <Experience/>
                         </div>
                     {/*</div>*/}
 
                     {/*<div className={classes.partMargin}>*/}
-                        <div className={"noneDisplay"}>
+                        <div className={"noneDisplay "+classes.partMargin}>
                             <Education/>
                         </div>
                     {/*</div>*/}
@@ -165,13 +129,13 @@ const MainPage=()=>{
                     {/*</div>*/}
 
                     {/*<div className={classes.partMargin}>*/}
-                        <div className={"noneDisplay"}>
+                        <div className={"noneDisplay "+classes.partMargin}>
                                 <Courses/>
                         </div>
                     {/*</div>*/}
 
                     {/*<div className={classes.partMargin}>*/}
-                        <div className={"noneDisplay"}>
+                        <div className={"noneDisplay "+classes.partMargin}>
                                 <Contact/>
                         </div>
                     {/*</div>*/}

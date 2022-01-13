@@ -7,7 +7,6 @@ import ClassOutlinedIcon from '@mui/icons-material/ClassOutlined'; 	            
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';                //education
 import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';      //work
 import {makeStyles} from "@material-ui/core";
-const COLOR_GREEN="#016b01";
 
 
 const sxStyle={
@@ -39,7 +38,6 @@ const sxStyle={
 const useStyles=makeStyles(()=>({
     container:{
         backgroundColor: "transparent",
-        // position:"fixed",
         display:"flex",
         flexDirection:"row",
         justifyContent:"flex-start",
@@ -47,9 +45,7 @@ const useStyles=makeStyles(()=>({
         flexWrap:"wrap",
         width:"100%",
         height:"10rem",
-
         columnGap:"2rem",
-        // paddingLeft:"1rem",
         backgroundImage:"linear-gradient(-8deg, transparent 70%, rgb(0, 0, 0, 0.5) 5%, rgb(0, 128, 0, 0.6) 60%, rgb(0, 128, 0, 1) 100%)",
     },
 }));
@@ -59,8 +55,8 @@ const CustomHeader=()=> {
     const classes=useStyles();
     const onDownload = () => {
         const link = document.createElement("a");
-        link.download = `download.txt`;
-        link.href = "./download.txt";
+        link.download = 'SayedMohammadAli-Mirkazemi_resume';
+        link.href = '../../assets/SayedMohammadAli-Mirkazemi_resume.pdf';
         link.click();
     };
 
@@ -115,7 +111,9 @@ const CustomHeader=()=> {
                 size="large"
                 edge="start"
                 color="inherit"
-                onClick={onDownload}
+                // onClick={onDownload}
+                download
+                href={'../../assets/SayedMohammadAli-Mirkazemi_resume.pdf'}
                 sx={sxStyle.downloadButtonStyle}
             >
                 <CloudDownloadOutlinedIcon sx={sxStyle.iconStyle}/>
