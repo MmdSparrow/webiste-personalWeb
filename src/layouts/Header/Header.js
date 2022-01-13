@@ -22,6 +22,12 @@ const sxStyle={
         },
         // marginRight:"4rem",
     },
+    firstIconButtonStyle:{
+        '&:hover': {
+            transform: "scale(1.15)",
+        },
+        marginLeft:"1rem",
+    },
     downloadButtonStyle:{
         '&:hover': {
             transform: "scale(1.15)",
@@ -37,10 +43,14 @@ const useStyles=makeStyles(()=>({
         display:"flex",
         flexDirection:"row",
         justifyContent:"flex-start",
+        alignContent:"flex-start",
         flexWrap:"wrap",
         width:"100%",
+        height:"10rem",
+
         columnGap:"2rem",
         // paddingLeft:"1rem",
+        backgroundImage:"linear-gradient(-8deg, transparent 70%, rgb(0, 0, 0, 0.5) 5%, rgb(0, 128, 0, 0.6) 60%, rgb(0, 128, 0, 1) 100%)",
     },
 }));
 
@@ -55,7 +65,7 @@ const CustomHeader=()=> {
     };
 
     const scrollToRef = (value) => {
-        document.getElementById(value).scrollIntoView({behavior:"smooth"});
+        window.scrollTo({top: (document.getElementById(value).offsetTop-170), behavior: 'smooth'});
     };
 
     return (
@@ -65,7 +75,7 @@ const CustomHeader=()=> {
                 edge="start"
                 color="inherit"
                 onClick={()=>scrollToRef('experience')}
-                sx={sxStyle.iconButtonStyle}
+                sx={sxStyle.firstIconButtonStyle}
             >
                 <WorkOutlineOutlinedIcon sx={sxStyle.iconStyle} />
             </IconButton>

@@ -15,7 +15,7 @@ const styles = {
     root: {
         position: 'relative',
         backgroundColor: 'transition',
-        width:"22rem",
+        width:"20rem",
     },
     slide: {
         // padding: 15,

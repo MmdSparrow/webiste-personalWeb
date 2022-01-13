@@ -1,5 +1,6 @@
 import {makeStyles} from "@material-ui/core";
 import '../../fonts/Fonts.css'
+import $ from "jquery";
 const COLOR_GREEN="#008000"
 
 setInterval(function(){
@@ -29,6 +30,7 @@ const useStyles=makeStyles(()=>({
         fontFamily: "roboto",
     },
 }));
+
 
 const WinkTitle=(props)=>{
     const classes=useStyles();

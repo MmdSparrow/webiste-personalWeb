@@ -8,6 +8,7 @@ import Education from "../layouts/Education/Education";
 import Contact from "../layouts/Contact/Contact";
 import Courses from "../layouts/Courses/Courses";
 import CustomHeader from "../layouts/Header/Header";
+import $ from 'jquery'
 
 const useStyles=makeStyles(()=>({
     pageStyle:{
@@ -22,8 +23,8 @@ const useStyles=makeStyles(()=>({
         flexWrap: 'wrap',
     },
     sliderAndWelcome:{
-        marginTop: "15rem",
-        marginBottom:"11rem",
+        marginTop: "6rem",
+        paddingBottom:"11rem",
     },
     textDiv:{
         marginBottom:"16rem",
@@ -31,7 +32,7 @@ const useStyles=makeStyles(()=>({
     },
     text:{
         color: "white",
-        fontSize: "66px",
+        fontSize: "62px",
         fontFamily: "roboto",
     },
     slider:{
@@ -48,9 +49,6 @@ const useStyles=makeStyles(()=>({
     sectionStyle:{
         marginLeft:"3rem",
     },
-    partMargin:{
-        marginTop:"10rem",
-    },
     contactDiv:{
         marginRight:"1rem",
         width:"100%",
@@ -66,24 +64,70 @@ const useStyles=makeStyles(()=>({
         color:"white",
         marginTop:"3rem",
     },
-    marginRightHeader:{
-      marginLeft:"1rem",
-    },
-
+    partMargin:{
+        marginTop:"10rem",
+    }
 }));
+
+// var i = 0;
+// function move() {
+//     if (i == 0) {
+//         var elem = document.getElementById("experience");
+//         var width = 1;
+//         var interval = setInterval(frame, 50);
+//
+//         function frame() {
+//             if (width >= 100) {
+//                 // eslint-disable-next-line no-undef
+//                 clearInterval(id);
+//                 interval = 0;
+//             } else {
+//                 width++;
+//                 elem.style.width = width + "%";
+//             }
+//         }
+//     }
+// }
+// function sleep(ms) {
+//     return new Promise(
+//         resolve => setTimeout(resolve, ms)
+//     );
+// }
+
+$(function(){
+    $(window).scroll(function(){
+        // console.log("scroll Top:");
+        // console.log();
+        const elements = document.getElementsByClassName('noneDisplay');
+        // var testDiv = document.getElementById("experience");
+        // console.log("offset top:");
+        // console.log(testDiv.offsetTop);
+        // console.log("scroll Top:");
+        console.log($(window).scrollTop()+window.innerHeight);
+        // console.log(elements.length)
+        for(let i=0; i<elements.length; i++) {
+            if($(window).scrollTop()+window.innerHeight>=elements[i].offsetTop) {
+                elements[i].style.marginTop=0;
+                elements[i].style.opacity=1;
+            }
+            else {
+                elements[i].style.marginTop="150px";
+                elements[i].style.opacity=0;
+            }
+        }
+    });
+});
 
 
 const MainPage=()=>{
     const classes = useStyles();
-
-
 
     return(
 
         <div className={classes.pageStyle}>
             <CanvasConnection/>
 
-            <div className={classes.marginRightHeader}>
+            <div>
                 <CustomHeader/>
             </div>
 
@@ -104,26 +148,38 @@ const MainPage=()=>{
 
                 <section className={classes.sectionStyle}>
 
-                    <div className={classes.partMargin}>
-                        <Experience/>
-                    </div>
+                    {/*<div className={classes.partMargin}>*/}
+                        <div className={"noneDisplay"}>
+                                <Experience/>
+                        </div>
+                    {/*</div>*/}
 
-                    <div className={classes.partMargin}>
-                        <Education/>
-                    </div>
+                    {/*<div className={classes.partMargin}>*/}
+                        <div className={"noneDisplay"}>
+                            <Education/>
+                        </div>
+                    {/*</div>*/}
 
-                    {/*<div>*/}
+                    {/*<div className={classes.noneDisplay+" "+classes.partMargin}>*/}
                     {/*    <Portfolio/>*/}
                     {/*</div>*/}
 
-                    <div>
-                        <Courses/>
-                    </div>
+                    {/*<div className={classes.partMargin}>*/}
+                        <div className={"noneDisplay"}>
+                                <Courses/>
+                        </div>
+                    {/*</div>*/}
 
-                    <div className={classes.partMargin + " " + classes.contactDiv}>
-                        <Contact/>
-                    </div>
+                    {/*<div className={classes.partMargin}>*/}
+                        <div className={"noneDisplay"}>
+                                <Contact/>
+                        </div>
+                    {/*</div>*/}
+
                 </section>
+
+
+
                 <div className={classes.licenseDiv}>
                     © 2022
                 </div>

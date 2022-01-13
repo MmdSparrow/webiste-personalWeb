@@ -36,6 +36,15 @@ const useStyles=makeStyles(()=>({
     },
 }));
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
 
 const Experience=()=>{
@@ -66,7 +75,7 @@ const Experience=()=>{
                         <span className={classes.spanColor}>Number Theory</span> teacher<br/>
                         Date: 2021/5/22 - present<br/>
                         Website: (website) <br/>
-                        To see my courses click <a href="#course">here</a>
+                        To see my courses click <a href="#courses">here</a>
                     </p>
                 </div>
             </div>
