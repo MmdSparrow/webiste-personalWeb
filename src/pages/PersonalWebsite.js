@@ -8,13 +8,9 @@ import Contact from "../layouts/Contact/Contact";
 import Courses from "../layouts/Courses/Courses";
 import CustomHeader from "../layouts/Header/Header";
 import $ from 'jquery'
+import CustomFooter from "../layouts/Footer/Footer";
 
 const useStyles=makeStyles(()=>({
-    pageStyle:{
-        // width:"100%",
-        // backgroundSize:"cover",
-        // position:"relative",
-    },
     flexTwoColumn:{
         display: 'flex',
         flexDirection: 'row',
@@ -88,7 +84,7 @@ const MainPage=()=>{
 
     return(
 
-        <div className={classes.pageStyle}>
+        <div>
             <CanvasConnection/>
 
             <div>
@@ -112,41 +108,29 @@ const MainPage=()=>{
 
                 <section className={classes.sectionStyle}>
 
-                    {/*<div className={classes.partMargin}>*/}
-                        <div className={"noneDisplay "+classes.partMargin}>
-                                <Experience/>
-                        </div>
-                    {/*</div>*/}
+                    <div className={"noneDisplay "+classes.partMargin}>
+                            <Experience/>
+                    </div>
 
-                    {/*<div className={classes.partMargin}>*/}
-                        <div className={"noneDisplay "+classes.partMargin}>
-                            <Education/>
-                        </div>
-                    {/*</div>*/}
+                    <div className={"noneDisplay "+classes.partMargin}>
+                        <Education/>
+                    </div>
 
                     {/*<div className={classes.noneDisplay+" "+classes.partMargin}>*/}
                     {/*    <Portfolio/>*/}
                     {/*</div>*/}
 
-                    {/*<div className={classes.partMargin}>*/}
-                        <div className={"noneDisplay "+classes.partMargin}>
-                                <Courses/>
-                        </div>
-                    {/*</div>*/}
+                    <div className={"noneDisplay "+classes.partMargin}>
+                            <Courses/>
+                    </div>
 
-                    {/*<div className={classes.partMargin}>*/}
-                        <div className={"noneDisplay "+classes.partMargin}>
-                                <Contact/>
-                        </div>
-                    {/*</div>*/}
+                    <div className={"noneDisplay "}>
+                            <Contact/>
+                    </div>
 
                 </section>
 
-
-
-                <div className={classes.licenseDiv}>
-                    © 2022
-                </div>
+                <CustomFooter/>
             </div>
 
 

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import ContactMailOutlinedIcon from '@mui/icons-material/ContactMailOutlined';      //contact mail
 import CloudDownloadOutlinedIcon from '@mui/icons-material/CloudDownloadOutlined';  //download
@@ -19,7 +18,6 @@ const sxStyle={
         '&:hover': {
             transform: "scale(1.15)",
         },
-        // marginRight:"4rem",
     },
     firstIconButtonStyle:{
         '&:hover': {
@@ -111,9 +109,7 @@ const CustomHeader=()=> {
                 size="large"
                 edge="start"
                 color="inherit"
-                // onClick={onDownload}
-                download
-                href={'../../assets/SayedMohammadAli-Mirkazemi_resume.pdf'}
+                onClick={onDownload}
                 sx={sxStyle.downloadButtonStyle}
             >
                 <CloudDownloadOutlinedIcon sx={sxStyle.iconStyle}/>

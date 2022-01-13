@@ -55,42 +55,38 @@ table {
 /*=====================================================*/
 /*==================     STYLE    =====================*/
 /*=====================================================*/
-
-
 #root{
-    /*background-color: black;*/
-
-/*              !*linear-gradient(8deg, transparent 95%, rgb(0, 0, 0, 0.5) 5%, rgb(0, 128, 0, 0.6) 60%, rgb(0, 128, 0, 1) 100%);*!*/
-
     position: page;
-
     background-color: black;
     background-size: cover;
     width: 100%;
 }
-body{
 
-background-color: red;
-    /*background-image: linear-gradient(-8deg, transparent 96%, rgb(0, 0, 0, 0.5) 5%, rgb(0, 128, 0, 0.6) 60%, rgb(0, 128, 0, 1) 100%),*/
-    /*linear-gradient(160deg, transparent 97%, rgb(0, 0, 0, 0.5) 5%, rgb(0, 128, 0, 0.6) 60%, rgb(0, 128, 0, 1) 100%);*/
+body{
+    background-color: black;
 }
+
 .noneDisplay{
+    /*if u change this 150px then u have to change button action in header
+      in header we have 150 + 20 and this 20 px is off space
+    */
     margin-top: 150px;
     opacity: 0;
     transition: all 2s;
-
 }
 
-/*#header{*/
-/*    background-image: linear-gradient(-8deg, transparent 96%, rgb(0, 0, 0, 0.5) 5%, rgb(0, 128, 0, 0.6) 60%, rgb(0, 128, 0, 1) 100%),*/
-/*    linear-gradient(160deg, transparent 97%, rgb(0, 0, 0, 0.5) 5%, rgb(0, 128, 0, 0.6) 60%, rgb(0, 128, 0, 1) 100%);*/
-/*}*/
+
+
+
+
+/*=====================================================*/
+/*==============     scroll style    ==================*/
+/*=====================================================*/
 
 body::-webkit-scrollbar {
     width: 0.25em;
 }
 body::-webkit-scrollbar-track {
-    /*background: #f1f1f1;*/
     background: black;
 }
 body::-webkit-scrollbar-thumb {
