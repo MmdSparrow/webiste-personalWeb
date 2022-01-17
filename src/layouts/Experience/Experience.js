@@ -21,7 +21,8 @@ const useStyles=makeStyles(()=>({
     h3Style:{
         color:"white",
         fontSize:"30px",
-        marginBottom:"0.7em",
+        marginTop:"0.7em",
+        marginBottom:"0.9em",
         fontFamily: "roboto",
     },
     spanColor:{
@@ -60,8 +61,7 @@ const Experience=()=>{
                     </h3>
                     <p className={classes.pStyle}>
                         <span className={classes.spanColor}>Backend developer</span> in:<br/>
-                        &ensp; <span className={classes.spanColor}>></span> Digital School project<br/>
-                        &ensp; <span className={classes.spanColor}>></span> Digital School project<br/>
+                        &ensp; <span className={classes.spanColor}>></span> Digital School team<br/>
                         Date: 2021/8/13 - present <br/>
                         Website: (website)
                     </p>

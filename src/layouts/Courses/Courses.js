@@ -19,7 +19,8 @@ const useStyles=makeStyles(()=>({
     h3Style:{
         color:"white",
         fontSize:"30px",
-        marginBottom:"0.7em",
+        marginBottom:"0.9em",
+        marginTop:"0.7em",
         fontFamily: "roboto",
     },
     spanColor:{
@@ -31,6 +32,10 @@ const useStyles=makeStyles(()=>({
         color:"white",
         marginTop:"0",
 
+    },
+    responsiveImage:{
+      width:"20rem",
+      height:"auto",
     },
 }));
 
@@ -45,19 +50,19 @@ const Courses=()=>{
             <div className={classes.flexTwoColumn}>
 
                 <div className={classes.flexColumn}>
-                    {/*<img src={require('../../assets/Images/course-summer-1400.jpg')} alt="number theory" width="400rem" height="400rem" />*/}
+                    <img src={require('../../assets/Images/course-summer-1400.jpg')} alt="number theory" className={classes.responsiveImage}/>
                     <h3 className={classes.h3Style}>
                         Number Theory
                     </h3>
-                    <p className={classes.pStyle}> <a href="http://mathhouse.org/" title="Isfahan Mathematics House">Isfahan Mathematics House website</a></p>
+                    <p className={classes.pStyle}> <a href="http://isf.mathhouse.org/?p=29627" title="here">Isfahan Mathematics House website</a></p>
                 </div>
 
                 <div className={classes.flexColumn}>
-                    {/*<img src={require('../../assets/Images/course-fall-1400.jpg')} alt="number theory" width="400rem" height="400rem" />*/}
+                    <img src={require('../../assets/Images/course-fall-1400.jpg')} alt="number theory" className={classes.responsiveImage}/>
                     <h3 className={classes.h3Style}>
                         Number Theory
                     </h3>
-                    <p className={classes.pStyle}> <a href="http://mathhouse.org/" title="Isfahan Mathematics House">Isfahan Mathematics House website</a></p>
+                    <p className={classes.pStyle}> <a href="http://mathhouse.org/" title="here">Isfahan Mathematics House website</a></p>
                 </div>
 
             </div>

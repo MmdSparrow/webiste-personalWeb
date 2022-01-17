@@ -27,7 +27,6 @@ const useStyles=makeStyles(()=>({
     dateSpan:{
         color: '#b4b3b3',
         fontSize:'17px',
-
     },
     positionSpan:{
         color: '#008000',
@@ -36,6 +35,9 @@ const useStyles=makeStyles(()=>({
     placeSpan:{
         color: '#3d3b3b',
         fontSize:'20px',
+    },
+    spanContainer:{
+        lineHeight:1.4,
     },
 }));
 
@@ -49,7 +51,7 @@ const Education=()=>{
                 <ul id="time-line">
                     <li>
                         <div>
-                            <span>
+                            <span className={classes.spanContainer}>
                                 <span className={classes.dateSpan}>2019 - present</span><br/>
                                 <span className={classes.positionSpan}>Bachelor of computer engineering</span><br/>
                                 <span className={classes.placeSpan}>AmirKabir University of Technology</span>
@@ -58,7 +60,7 @@ const Education=()=>{
                     </li>
                     <li>
                         <div>
-                            <span>
+                            <span className={classes.spanContainer}>
                                 <span className={classes.dateSpan}>2016 - 2019</span><br/>
                                 <span className={classes.positionSpan}>Diploma of mathematics science</span><br/>
                                 <span className={classes.placeSpan}>Harati high school</span>
